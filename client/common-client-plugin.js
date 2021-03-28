@@ -1,7 +1,14 @@
-function register ({ registerHook, peertubeHelpers }) {
+async function register ({ registerVideoField, peertubeHelpers }) {
+  const descriptionHTML = await peertubeHelpers.translate(descriptionSource)
+  const commonOptions = {
+    name: 'my-field-name,
+    label: 'My added field',
+    descriptionHTML: 'Optional description',
+    type: 'input-textarea',
+    default: ''
+  }
 
-}
-
-export {
-  register
+  for (const type of [ 'upload', 'import-url', 'import-torrent', 'update' ]) {
+    registerVideoField(commonOptions, { type })
+  }
 }
