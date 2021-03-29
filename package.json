@@ -3,7 +3,7 @@
   "description": "Save and play videos based off youtube embed url",
   "version": "0.0.1",
   "author": "Viddit",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
   "private" : true,
   "bugs": "https://github.com/codygriffith/peertube-plugin-youprop/issues",
   "clientScripts": [
